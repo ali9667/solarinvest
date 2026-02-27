@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: 💬 Discussion / Question
+    url: https://github.com/YOUR_USERNAME/solarinvest/discussions
+    about: Ask questions and discuss ideas in GitHub Discussions
+
+  - name: 📖 Documentation
+    url: https://github.com/YOUR_USERNAME/solarinvest#readme
+    about: Read the project README and setup guide
+
+  - name: 🔒 Critical Security Vulnerability
+    url: https://github.com/YOUR_USERNAME/solarinvest/security/advisories/new
+    about: Report a critical security issue privately via GitHub Security Advisories

@@ -1,0 +1,147 @@
+# GitHub Labels Configuration
+# Apply these with: npx github-label-sync --access-token YOUR_TOKEN --labels .github/labels.yml YOUR_USERNAME/solarinvest
+
+# ─── Type labels ───────────────────────────────────────────
+- name: "bug"
+  color: "d73a4a"
+  description: "Something isn't working correctly"
+
+- name: "enhancement"
+  color: "a2eeef"
+  description: "New feature or improvement request"
+
+- name: "security"
+  color: "e4e669"
+  description: "Security vulnerability or hardening"
+
+- name: "documentation"
+  color: "0075ca"
+  description: "Documentation only changes"
+
+- name: "refactor"
+  color: "f9d0c4"
+  description: "Code change with no functional effect"
+
+- name: "performance"
+  color: "e6f3ff"
+  description: "Performance improvement"
+
+- name: "test"
+  color: "bfd4f2"
+  description: "Adding or fixing tests"
+
+- name: "chore"
+  color: "eeeeee"
+  description: "Build, CI/CD, dependency updates"
+
+# ─── Area labels ───────────────────────────────────────────
+- name: "backend"
+  color: "0e8a16"
+  description: "Node.js / Express / MongoDB backend"
+
+- name: "frontend"
+  color: "1d76db"
+  description: "React / Vite / TailwindCSS frontend"
+
+- name: "auth"
+  color: "5319e7"
+  description: "Authentication or authorization"
+
+- name: "investments"
+  color: "f4c842"
+  description: "Investment flow (invest, withdraw, portfolio)"
+
+- name: "admin"
+  color: "c2e0c6"
+  description: "Admin features or admin-only APIs"
+
+- name: "ci"
+  color: "ededed"
+  description: "CI/CD pipelines and GitHub Actions"
+
+- name: "docker"
+  color: "0db7ed"
+  description: "Docker, docker-compose, deployment"
+
+- name: "dependencies"
+  color: "0366d6"
+  description: "Dependency version updates"
+
+# ─── Status labels ─────────────────────────────────────────
+- name: "needs-triage"
+  color: "e11d48"
+  description: "Newly opened — needs prioritization"
+
+- name: "in-progress"
+  color: "fbca04"
+  description: "Currently being worked on"
+
+- name: "blocked"
+  color: "b60205"
+  description: "Blocked by another issue or external dependency"
+
+- name: "needs-review"
+  color: "006b75"
+  description: "Ready for code review"
+
+- name: "needs-info"
+  color: "d4c5f9"
+  description: "Waiting on more information from the reporter"
+
+- name: "stale"
+  color: "cccccc"
+  description: "No activity for 30+ days"
+
+- name: "pinned"
+  color: "0052cc"
+  description: "Exempt from stale automation — keep open"
+
+- name: "do-not-close"
+  color: "0052cc"
+  description: "PR exempt from stale automation"
+
+- name: "wontfix"
+  color: "ffffff"
+  description: "Acknowledged but will not be addressed"
+
+- name: "duplicate"
+  color: "cfd3d7"
+  description: "Duplicate of another issue"
+
+# ─── Priority labels ───────────────────────────────────────
+- name: "priority: critical"
+  color: "b60205"
+  description: "Must be fixed immediately"
+
+- name: "priority: high"
+  color: "e4522b"
+  description: "Important — next milestone"
+
+- name: "priority: medium"
+  color: "f9d0c4"
+  description: "Should be addressed soon"
+
+- name: "priority: low"
+  color: "fef2c0"
+  description: "Nice to have — not urgent"
+
+# ─── Size labels (for PRs) ─────────────────────────────────
+- name: "size: XS"
+  color: "3cbf00"
+  description: "Very small change (<10 lines)"
+
+- name: "size: S"
+  color: "5d9801"
+  description: "Small change (10-50 lines)"
+
+- name: "size: M"
+  color: "7f7203"
+  description: "Medium change (50-200 lines)"
+
+- name: "size: L"
+  color: "a14c05"
+  description: "Large change (200-500 lines)"
+
+- name: "size: XL"
+  color: "c32607"
+  description: "Very large change (500+ lines) — consider splitting"

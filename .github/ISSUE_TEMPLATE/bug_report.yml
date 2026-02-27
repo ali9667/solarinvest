@@ -1,0 +1,129 @@
+name: 🐛 Bug Report
+description: Report a bug or unexpected behavior
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill this out as thoroughly as possible.
+        Before submitting, please check the [existing issues](../../issues) to avoid duplicates.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of the app is affected?
+      options:
+        - Authentication (login, register, password reset)
+        - Projects (browsing, filtering, search)
+        - Investments (investing, withdrawing)
+        - Portfolio (charts, values, CO₂)
+        - Transactions
+        - Admin Dashboard
+        - Admin Project Management
+        - API / Backend
+        - Docker / Deployment
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear, concise description of what the bug is.
+      placeholder: "When I click 'Invest', the button spins forever and no confirmation appears..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Exact steps to trigger the bug.
+      value: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Enter '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: "Investment should be created and I should see a success message."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened? Include any error messages or console output.
+      placeholder: "The page hangs with a loading spinner. The network tab shows a 500 error."
+    validations:
+      required: true
+
+  - type: textarea
+    id: api-response
+    attributes:
+      label: API Error Response (if applicable)
+      description: Paste the full JSON error response from the API if this is a backend issue.
+      render: json
+      placeholder: |
+        {
+          "success": false,
+          "error": {
+            "code": "INTERNAL_ERROR",
+            "message": "..."
+          }
+        }
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - Local development (npm run dev)
+        - Docker Compose (docker-compose up)
+        - Production
+        - Staging
+    validations:
+      required: true
+
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js Version
+      placeholder: "20.11.0 (run: node --version)"
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser (for frontend bugs)
+      placeholder: "Chrome 121, Firefox 122, Safari 17..."
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs
+      description: Paste relevant backend console output or browser console errors.
+      render: shell
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched existing issues and this is not a duplicate
+          required: true
+        - label: I have included all steps needed to reproduce the bug
+          required: true
+        - label: I have included the relevant error messages / logs
+          required: true

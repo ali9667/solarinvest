@@ -1,0 +1,75 @@
+name: 🚀 Feature Request
+description: Suggest a new feature or enhancement
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a feature! We love hearing ideas for making SolarInvest better.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Feature Area
+      options:
+        - Authentication & User Management
+        - Investment Flow
+        - Portfolio & Analytics
+        - Admin Tools
+        - Payments & Wallet
+        - Notifications
+        - Performance
+        - Security
+        - DevOps / Deployment
+        - Developer Experience
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem does this solve? What's the user pain point?
+      placeholder: "As an investor, I can't see my month-by-month returns broken down by project, which makes it hard to understand which investments are performing best."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the feature you'd like to see. Be as specific as possible.
+      placeholder: "Add a breakdown table on the Portfolio page showing monthly return for each project, with a sparkline chart per project row."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: What other approaches did you think of?
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority (from your perspective)
+      options:
+        - 🔥 Critical — blocking me from using the platform
+        - 🟠 High — would significantly improve my experience
+        - 🟡 Medium — nice to have
+        - 🟢 Low — minor improvement
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched existing issues and this is not a duplicate
+          required: true
+        - label: This feature aligns with the investment platform use case
+          required: true

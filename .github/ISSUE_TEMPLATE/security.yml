@@ -1,0 +1,46 @@
+name: 🔒 Security Vulnerability
+description: Report a security vulnerability (for non-critical issues only — see SECURITY.md for critical ones)
+title: "[Security]: "
+labels: ["security", "needs-triage"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **For critical security vulnerabilities** (e.g., authentication bypass, data exposure),
+        please **do not** use this public form. Instead, follow the process in [SECURITY.md](../../SECURITY.md)
+        to report privately.
+
+        This form is for lower-severity security improvements or hardening suggestions.
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Low — minor hardening improvement
+        - Medium — could be exploited under specific circumstances
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Vulnerability Description
+      description: Describe the security issue without including exploit code.
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Potential Impact
+      description: What could an attacker achieve by exploiting this?
+    validations:
+      required: true
+
+  - type: textarea
+    id: mitigation
+    attributes:
+      label: Suggested Mitigation
+      description: Any ideas for how to fix or mitigate this?

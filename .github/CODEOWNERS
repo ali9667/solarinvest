@@ -1,0 +1,43 @@
+# CODEOWNERS — automatically requests review from the right people
+#
+# Format:
+#   <file pattern>    <GitHub username(s)>
+#
+# Replace @your-username with your actual GitHub username.
+# Add teammates as needed.
+#
+# Rules:
+# - More specific patterns take precedence over general ones
+# - Last matching pattern wins
+
+# ─── Global fallback ───────────────────────────────────────
+*                               @your-username
+
+# ─── Backend ───────────────────────────────────────────────
+/backend/                       @your-username
+
+# Extra eyes on security-sensitive areas
+/backend/middleware/auth.js     @your-username
+/backend/middleware/rateLimiter.js @your-username
+/backend/utils/tokens.js        @your-username
+/backend/services/authService.js @your-username
+/backend/models/User.js         @your-username
+
+# Financial logic — require careful review
+/backend/services/investmentService.js @your-username
+/backend/models/Investment.js   @your-username
+/backend/models/Ledger.js       @your-username
+/backend/workers/              @your-username
+
+# ─── Frontend ──────────────────────────────────────────────
+/frontend/                      @your-username
+
+# ─── CI/CD — review all pipeline changes ───────────────────
+/.github/                       @your-username
+/docker-compose.yml             @your-username
+/backend/Dockerfile             @your-username
+/frontend/Dockerfile            @your-username
+
+# ─── Docs ──────────────────────────────────────────────────
+*.md                            @your-username
+SECURITY.md                     @your-username
