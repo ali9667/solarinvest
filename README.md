@@ -67,20 +67,20 @@ cd solarinvest
 # Backend
 cd backend
 npm install
-cp .env.example .env   # set MONGO_URI and JWT_SECRET
+cp .env.example .env   
 npm run seed
-npm run dev            # http://localhost:5000
+npm run dev            
 
 # Frontend (new terminal)
 cd ../frontend
 npm install
-npm run dev            # http://localhost:5173
+npm run dev            
 ```
 
 ### Docker
 
 ```bash
-cp backend/.env.example backend/.env   # set JWT_SECRET
+cp backend/.env.example backend/.env   
 docker-compose up --build
 # App: http://localhost  |  API: http://localhost:5000
 ```
@@ -93,19 +93,6 @@ docker-compose up --build
 |------|-------|----------|
 | Investor | `investor@solarinvest.com` | `Demo@123` |
 | Admin | `admin@solarinvest.com` | `Admin@123` |
-
----
-
-## ⚙️ Environment Variables (`backend/.env`)
-
-```env
-MONGO_URI=mongodb://localhost:27017/solarinvest
-PORT=5000
-NODE_ENV=development
-JWT_SECRET=your_super_secret_jwt_key_minimum_32_characters_long
-CLIENT_URL=http://localhost:5173
-CORS_ORIGINS=http://localhost:5173
-```
 
 ---
 
