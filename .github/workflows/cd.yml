@@ -52,7 +52,7 @@ jobs:
       # Backend image metadata
       - name: Backend image metadata
         id: meta-backend
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: ${{ secrets.DOCKERHUB_USERNAME }}/solarinvest-backend
           tags: |
@@ -63,7 +63,7 @@ jobs:
       # Frontend image metadata
       - name: Frontend image metadata
         id: meta-frontend
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: ${{ secrets.DOCKERHUB_USERNAME }}/solarinvest-frontend
           tags: |
