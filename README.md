@@ -2,187 +2,442 @@
 
 # ☀️ SolarInvest
 
-**A full-stack investment marketplace for solar energy projects**
+### A Full-Stack Solar Energy Investment Platform
 
-[![CI](https://github.com/YOUR_USERNAME/solarinvest/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/solarinvest/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/YOUR_USERNAME/solarinvest/actions/workflows/codeql.yml/badge.svg)](https://github.com/YOUR_USERNAME/solarinvest/actions/workflows/codeql.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js](https://img.shields.io/badge/Node.js-20+-green.svg)](https://nodejs.org)
-[![MongoDB](https://img.shields.io/badge/MongoDB-7.0-brightgreen.svg)](https://www.mongodb.com)
-[![React](https://img.shields.io/badge/React-18-blue.svg)](https://reactjs.org)
+Invest in renewable energy projects, track portfolio growth, monitor returns, and manage investments through a secure MERN Stack application.
 
-[Live Demo](#) · [Report Bug](../../issues/new?template=bug_report.yml) · [Request Feature](../../issues/new?template=feature_request.yml)
+![React](https://img.shields.io/badge/React-18-blue?logo=react)
+![Node.js](https://img.shields.io/badge/Node.js-20-green?logo=node.js)
+![Express](https://img.shields.io/badge/Express.js-Backend-black?logo=express)
+![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green?logo=mongodb)
+![JWT](https://img.shields.io/badge/Auth-JWT-orange)
+![License](https://img.shields.io/badge/License-MIT-blue)
 
 </div>
 
 ---
 
-## 📖 Overview
+# 📖 Overview
 
-SolarInvest is a production-grade investment platform where users invest in real solar energy projects and earn compound interest returns. Think of it as **Zerodha for solar farms**.
+SolarInvest is a full-stack investment platform built using the MERN stack that allows users to invest in renewable solar energy projects.
 
-### Key Features
+The platform provides secure authentication, portfolio management, investment tracking, transaction history, compound ROI calculation, and an admin dashboard for managing projects and monitoring platform analytics.
 
-- 🔐 JWT cookie auth with brute-force protection
-- 📊 Real compound interest with live portfolio charts
-- 📒 Immutable financial ledger for every money movement
-- 🔄 Background growth worker (runs every 5 minutes)
-- ⚡ In-memory TTL cache for projects and portfolios
-- 🛡 Helmet, CORS whitelist, XSS/NoSQL sanitization, tiered rate limiting
-- 🌿 CO₂ offset tracking per investment
-- 📁 CSV portfolio export
-- 🌙 Dark mode
-- 👑 Admin dashboard with platform analytics
+The application follows a layered backend architecture (Controller → Service → Repository → Model) making it scalable and maintainable.
 
 ---
 
-## 🏗 Architecture
+# 🚀 Features
 
-```
-Controller → Service → Repository → Model
-```
+### 👤 Authentication
 
-| Layer | Job |
-|-------|-----|
-| **Controller** | Extract HTTP params, call service, return response |
-| **Service** | Business logic, validates rules, throws typed errors |
-| **Repository** | All DB queries — only layer that touches Mongoose |
-| **Model** | Schema, indexes, virtuals, pre-hooks |
+- JWT Authentication
+- HTTP-only Cookie Sessions
+- Role-based Access Control
+- Password Encryption using bcrypt
+- Forgot Password
+- Reset Password
+- Change Password
+- Login Attempt Lock
 
 ---
 
-## 🚀 Quick Start
+### 🌞 Investment Platform
 
-### Prerequisites
+- Browse Solar Projects
+- Invest in Projects
+- Compound ROI Calculation
+- Portfolio Tracking
+- Monthly Growth
+- Total Returns
+- CO₂ Savings Tracking
 
-- Node.js 18+
-- MongoDB 6+ (local or Atlas)
+---
 
-### Local Development
+### 💳 Transactions
+
+- Investment History
+- Withdrawal Records
+- Ledger System
+- CSV Export
+
+---
+
+### 👑 Admin Features
+
+- Admin Dashboard
+- Project Management
+- Platform Analytics
+- User Monitoring
+- Investment Statistics
+
+---
+
+### 🔐 Security
+
+- Helmet Security
+- CORS Protection
+- JWT Authentication
+- Password Hashing
+- Rate Limiting
+- Secure Cookies
+- Audit Logs
+
+---
+
+# 🛠 Tech Stack
+
+## Frontend
+
+- React.js
+- Vite
+- React Router
+- Axios
+- Chart.js
+- CSS
+
+---
+
+## Backend
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT
+- bcrypt
+- Cookie Parser
+
+---
+
+## Database
+
+MongoDB Atlas
+
+---
+
+## Deployment
+
+Frontend → Vercel
+
+Backend → Render
+
+Database → MongoDB Atlas
+
+---
+
+# 📸 Project Screenshots
+
+## 📊 Investor Dashboard
+
+![Dashboard](./screenshots/dashboard.png)
+
+---
+
+## 💼 Portfolio
+
+![Portfolio](./screenshots/portfolio.png)
+
+---
+
+## 💳 Transactions
+
+![Transactions](./screenshots/transactions.png)
+
+---
+
+## 👑 Admin Dashboard
+
+![Admin Dashboard](./screenshots/admin.png)
+
+---
+
+# 📂 Project Structure
+
+```
+SolarInvest
+│
+├── backend
+│   ├── config
+│   ├── controllers
+│   ├── middleware
+│   ├── models
+│   ├── repositories
+│   ├── routes
+│   ├── services
+│   ├── scripts
+│   ├── utils
+│   └── server.js
+│
+├── frontend
+│   ├── src
+│   ├── public
+│   └── vite.config.js
+│
+├── screenshots
+│
+└── README.md
+```
+
+---
+
+# 🏗 Backend Architecture
+
+```
+Routes
+   │
+Controllers
+   │
+Services
+   │
+Repositories
+   │
+MongoDB Models
+```
+
+The layered architecture keeps business logic separated from controllers and database operations, making the application easier to maintain and scale.
+
+---
+
+# 🔑 Demo Credentials
+
+## Admin
+
+Email
+
+```
+admin@solarinvest.com
+```
+
+Password
+
+```
+Admin@123
+```
+
+---
+
+## Investor
+
+Email
+
+```
+investor@solarinvest.com
+```
+
+Password
+
+```
+Demo@123
+```
+
+---
+
+# ⚙️ Installation
+
+## Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/solarinvest.git
+git clone https://github.com/ali9667/solarinvest.git
 cd solarinvest
+```
 
-# Backend
+---
+
+## Backend Setup
+
+```bash
 cd backend
 npm install
-cp .env.example .env   
-npm run seed
-npm run dev            
-
-# Frontend (new terminal)
-cd ../frontend
-npm install
-npm run dev            
 ```
 
-### Docker
+Create a `.env` file inside the `backend` directory and add:
+
+```env
+PORT=5000
+
+MONGO_URI=your_mongodb_connection_string
+
+JWT_SECRET=your_jwt_secret
+
+CLIENT_URL=http://localhost:5173
+
+NODE_ENV=development
+```
+
+Run the backend:
 
 ```bash
-cp backend/.env.example backend/.env   
-docker-compose up --build
-# App: http://localhost  |  API: http://localhost:5000
+npm run dev
 ```
 
 ---
 
-## 🔑 Demo Credentials
+## Frontend Setup
 
-| Role | Email | Password |
-|------|-------|----------|
-| Investor | `investor@solarinvest.com` | `Demo@123` |
-| Admin | `admin@solarinvest.com` | `Admin@123` |
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
----
+Frontend will start on:
 
-## 📡 API Reference
+```
+http://localhost:5173
+```
 
-All responses: `{ success, data, meta: { requestId, timestamp } }`
+Backend API:
 
-### Auth `/api/auth`
-| Method | Path | Description |
-|--------|------|-------------|
-| POST | `/register` | Create account |
-| POST | `/login` | Login (20/15min rate limit) |
-| POST | `/logout` | Clear session |
-| GET | `/me` | Current user |
-| PUT | `/profile` | Update name |
-| PUT | `/change-password` | Change password |
-| POST | `/forgot-password` | Request reset token |
-| POST | `/reset-password` | Reset with token |
-
-### Projects `/api/projects`
-| Method | Path | Description |
-|--------|------|-------------|
-| GET | `/` | List with `?search=&status=&page=&limit=` |
-| GET | `/:id` | Single project |
-| POST | `/` | Create (admin only) |
-| PUT | `/:id` | Update (admin only) |
-| DELETE | `/:id` | Soft delete (admin only) |
-
-### Investments `/api/investments`
-| Method | Path | Description |
-|--------|------|-------------|
-| POST | `/` | Invest (10/min rate limit) |
-| POST | `/:id/withdraw` | Withdraw |
-| GET | `/portfolio` | Portfolio + 12-month chart |
-| GET | `/transactions` | Transaction history |
-| GET | `/export/csv` | Download as CSV |
-
-### Admin `/api/admin`
-| Method | Path | Description |
-|--------|------|-------------|
-| GET | `/analytics` | Platform KPIs + charts |
+```
+http://localhost:5000
+```
 
 ---
 
-## 🔐 Security Layers
+# 🌐 Environment Variables
 
-| Layer | Mechanism |
-|-------|-----------|
-| Tokens | JWT in `httpOnly` cookies |
-| Brute-force | Account lock after 5 failed logins (15 min) |
-| Rate limiting | 4 tiers: 300/15min global, 20/15min auth, 10/min invest, 100/5min admin |
-| Headers | Helmet: CSP, HSTS, Referrer-Policy |
-| Input | XSS, NoSQL injection (`$` prefix), prototype pollution |
-| Passwords | bcrypt 12 rounds |
-| Audit | All sensitive actions logged with IP + user agent |
+## Backend
 
-See [SECURITY.md](SECURITY.md) to report a vulnerability.
+| Variable   | Description                       |
+| ---------- | --------------------------------- |
+| PORT       | Backend Port                      |
+| MONGO_URI  | MongoDB Atlas Connection String   |
+| JWT_SECRET | Secret Key for JWT Authentication |
+| CLIENT_URL | Frontend URL                      |
+| NODE_ENV   | development / production          |
 
 ---
 
-## 🗃 MongoDB Collections
+# 📡 API Overview
 
-- **Users** — auth, roles, login lock
-- **Projects** — solar projects, soft delete, text search
-- **Investments** — compound interest virtuals, ROI locking
-- **Ledger** — immutable financial records (INVEST / WITHDRAW / GROWTH)
-- **AuditLog** — action trail, auto-expires after 1 year (TTL index)
+## Authentication
 
----
-
-## 🚢 Production Deployment
-
-| Service | Platform |
-|---------|----------|
-| Backend | Render or Railway (root: `backend/`) |
-| Frontend | Vercel or Netlify (root: `frontend/`, publish: `dist/`) |
-| Database | MongoDB Atlas |
+```
+POST /api/auth/register
+POST /api/auth/login
+POST /api/auth/logout
+GET  /api/auth/me
+PUT  /api/auth/profile
+PUT  /api/auth/change-password
+POST /api/auth/forgot-password
+POST /api/auth/reset-password
+```
 
 ---
 
-## 🤝 Contributing
+## Projects
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a PR. Branch off `develop`.
+```
+GET    /api/projects
+GET    /api/projects/:id
+POST   /api/projects
+PUT    /api/projects/:id
+DELETE /api/projects/:id
+```
 
 ---
 
-## 📄 License
+## Investments
 
-[MIT](LICENSE)
+```
+POST /api/investments
+GET  /api/investments/portfolio
+GET  /api/investments/transactions
+POST /api/investments/:id/withdraw
+GET  /api/investments/export/csv
+```
 
 ---
 
-<div align="center">Made with ☀️ for greener investments</div>
+## Admin
+
+```
+GET /api/admin/analytics
+```
+
+---
+
+# 💾 Database Collections
+
+The application uses MongoDB Atlas with the following collections:
+
+- Users
+- Projects
+- Investments
+- Ledger
+- Audit Logs
+
+---
+
+# 🚀 Deployment
+
+## Frontend
+
+Deploy using:
+
+- Vercel
+- Netlify
+
+---
+
+## Backend
+
+Deploy using:
+
+- Render
+
+---
+
+## Database
+
+MongoDB Atlas
+
+---
+
+# 📈 Future Improvements
+
+- Razorpay / Stripe Payment Integration
+- KYC Verification
+- Email Notifications
+- Investment Reports (PDF)
+- Real-Time Notifications
+- Mobile Responsive Dashboard Improvements
+- AI-based Investment Recommendations
+- Multi-language Support
+
+---
+
+# 👨‍💻 Author
+
+**Ali Mansoori**
+
+B.Tech Computer Science (Data Science)
+
+Full Stack Developer
+
+GitHub:
+
+https://github.com/ali9667
+
+---
+
+# ⭐ If you like this project
+
+Give this repository a ⭐ on GitHub.
+
+It helps others discover the project and motivates future improvements.
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+<div align="center">
+
+Made with ❤️ using the MERN Stack to promote renewable energy investments.
+
+</div>
