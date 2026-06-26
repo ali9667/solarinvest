@@ -40,20 +40,7 @@ const authService = {
     if (!email || !password)
       throw Errors.validation("Email and password are required");
 
-    console.log("========== LOGIN DEBUG ==========");
-    console.log("Email Received:", email);
-
     const user = await userRepo.findByEmail(email);
-
-    console.log("User Found:", !!user);
-
-    if (user) {
-      console.log("DB Email:", user.email);
-      console.log("Role:", user.role);
-
-      const debugMatch = await user.matchPassword(password);
-      console.log("Password Match:", debugMatch);
-    }
 
     if (!user) throw Errors.badCredentials();
 
